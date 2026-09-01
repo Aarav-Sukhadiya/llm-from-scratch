@@ -2,6 +2,11 @@
 
 An educational project implementing a Generative Pre-trained Transformer (GPT) language model from scratch using PyTorch. The goal of this project is to build and understand the core components of modern Large Language Models step-by-step.
 
+## Technologies Used
+- **Python 3.11**
+- **PyTorch** (with CUDA 13.0 for GPU acceleration)
+- **tiktoken** (OpenAI's Byte Pair Encoding tokenizer)
+
 ## Project Structure
 
 The repository is organized around the sequential steps of building an LLM:
@@ -27,13 +32,13 @@ The repository is organized around the sequential steps of building an LLM:
 
 ## Setup and Usage
 
-1. Create a virtual environment:
+1. Create a Python 3.11 virtual environment:
    ```bash
-   python3 -m venv .venv
+   python3.11 -m venv .venv
    source .venv/bin/activate
    ```
 
-2. Install dependencies:
+2. Install dependencies (including PyTorch with CUDA support):
    ```bash
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
    pip install tiktoken regex requests
