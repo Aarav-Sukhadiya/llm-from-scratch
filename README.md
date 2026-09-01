@@ -9,26 +9,22 @@ An educational project implementing a Generative Pre-trained Transformer (GPT) l
 
 ## Project Structure
 
-The repository is organized around the sequential steps of building an LLM:
+The repository is organized into core components (`src/`) and testing/learning scripts (`demo/`):
 
-### Tokenization
+### `src/` (Core Architecture)
 - `simple_tokenizer.py`: A custom character/word-level tokenizer built from scratch.
+- `dataset.py`: PyTorch `Dataset` and `DataLoader` implementation for generating input-target pairs using a sliding context window.
+- `attention_mechanisms.py`: Step-by-step implementations of attention (Basic, PyTorch Linear, and Causal Masking).
+- `MultiHeadedAttention.py`: Highly optimized, fully vectorized Multi-Head Attention layer.
+
+### `demo/` (Learning & Testing)
 - `custom_tokenization_demo.py`: Demonstration of building a vocabulary and tokenizing text using the custom tokenizer.
 - `bpe_tokenization_demo.py`: Demonstration of Byte Pair Encoding (BPE) using OpenAI's `tiktoken` library (GPT-2 tokenizer).
-
-### Data Preparation
-- `dataset.py`: PyTorch `Dataset` and `DataLoader` implementation for generating input-target pairs using a sliding context window.
-- `the_verdict.txt`: A small text corpus ("The Verdict" by Edith Wharton) used for testing tokenization and training.
-
-### Embeddings
 - `embeddings_demo.py`: Implementation combining Token Embeddings and Positional Embeddings into a unified input representation.
-
-### Attention Mechanisms
-- `attention-mechanisms.py`: Step-by-step implementations of attention:
-  - `SelfAttention_v1`: Basic self-attention using raw matrix multiplications.
-  - `SelfAttention_v2`: Self-attention using PyTorch `nn.Linear` layers.
-  - `CausalAttention`: Self-attention with causal masking (to prevent looking at future tokens) and dropout.
 - `simplified_attention.py`: A bare-bones, weightless attention mechanism for conceptual demonstration.
+
+### Data
+- `the_verdict.txt`: A small text corpus ("The Verdict" by Edith Wharton) used for testing tokenization and training.
 
 ## Setup and Usage
 
@@ -46,6 +42,6 @@ The repository is organized around the sequential steps of building an LLM:
 
 3. Run any of the demo scripts to see the components in action:
    ```bash
-   python embeddings_demo.py
-   python bpe_tokenization_demo.py
+   python demo/embeddings_demo.py
+   python demo/bpe_tokenization_demo.py
    ```

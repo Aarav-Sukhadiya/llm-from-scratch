@@ -1,7 +1,10 @@
+import os
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 import re 
 from simple_tokenizer import SimpleTokenizerV2
 
-with open("the_verdict.txt","r") as file:
+with open(os.path.join(os.path.dirname(__file__), '..', 'the_verdict.txt'), "r") as file:
     raw_text = file.read()
 file.close()
 
