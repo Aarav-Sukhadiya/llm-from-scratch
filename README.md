@@ -12,15 +12,15 @@ An educational project implementing a Generative Pre-trained Transformer (GPT) l
 The repository is organized into core components (`src/`) and testing/learning scripts (`demo/`):
 
 ### `src/` (Core Architecture)
-- `simple_tokenizer.py`: A custom character/word-level tokenizer built from scratch.
 - `dataset.py`: PyTorch `Dataset` and `DataLoader` implementation for generating input-target pairs using a sliding context window.
-- `attention_mechanisms.py`: Step-by-step implementations of attention (Basic, PyTorch Linear, and Causal Masking).
 - `MultiHeadedAttention.py`: Highly optimized, fully vectorized Multi-Head Attention layer.
 
 ### `demo/` (Learning & Testing)
+- `simple_tokenizer.py`: A custom character/word-level tokenizer built from scratch.
 - `custom_tokenization_demo.py`: Demonstration of building a vocabulary and tokenizing text using the custom tokenizer.
 - `bpe_tokenization_demo.py`: Demonstration of Byte Pair Encoding (BPE) using OpenAI's `tiktoken` library (GPT-2 tokenizer).
 - `embeddings_demo.py`: Implementation combining Token Embeddings and Positional Embeddings into a unified input representation.
+- `attention_mechanisms.py`: Step-by-step implementations of attention (Basic, PyTorch Linear, and Causal Masking).
 - `simplified_attention.py`: A bare-bones, weightless attention mechanism for conceptual demonstration.
 
 ### Data
